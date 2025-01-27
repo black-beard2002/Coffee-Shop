@@ -11,7 +11,7 @@ function HeaderNav() {
     <nav className="w-full bg-white fixed z-50 h-[4.5rem] flex items-center font-poppins">
       <div className="w-full flex flex-row items-center justify-between px-4 md:px-12">
         <div className="flex flex-row gap-2 items-center">
-          <h2 className="text-[#443] text-2xl font-poppins">Brew Haven</h2>
+          <h2 className="text-[#443] text-2xl font-poppins">Memories</h2>
           <FontAwesomeIcon icon={faMugHot} className="text-[#443] w-6 h-6" />
         </div>
         
