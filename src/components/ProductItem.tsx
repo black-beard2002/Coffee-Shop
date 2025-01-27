@@ -1,8 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { faInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const ProductItem = ({ product }) => {
+interface Product {
+  id: number;
+  name: string;
+  detailedDescription: string;
+  description: string;
+  image: string;
+  price: number;
+}
+interface ProductProps {
+  product: Product;  // Change from review to product to match the prop name
+}
+
+export const ProductItem: React.FC<ProductProps> = ({ product }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
@@ -21,7 +33,7 @@ export const ProductItem = ({ product }) => {
               transition-transform duration-300 group-hover:scale-110"
           />
         </div>
-        <div className="flex-grow min-w-0"> {/* Added min-w-0 to allow truncation */}
+        <div className="flex-grow min-w-0"> {/* Added min-w-0 to allow truncation */} 
           <div className="flex items-center gap-1 mb-1">
             <div className="flex-shrink-0 relative">
               <FontAwesomeIcon
