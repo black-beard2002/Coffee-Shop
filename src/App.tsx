@@ -8,11 +8,11 @@ import abouticon1 from "./assets/image/abouticon1.png";
 import abouticon2 from "./assets/image/abouticon2.png";
 import abouticon3 from "./assets/image/abouticon3.png";
 import menubg from "./assets/image/menubg.jpg";
-import items from "./assets/data/menuitems.js";
+import items from "./assets/data/menuitems.ts";
 import bookbg from "./assets/image/bookbg.jpg";
 import { ProductItem } from "./components/ProductItem.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import reviews from "./assets/data/reviews.js";
+import reviews from "./assets/data/reviews.ts";
 
 import {
   faArrowRight,
@@ -34,6 +34,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
+
+  interface Review {
+    id: number;
+    text: string;
+    date: string;
+    client: string;
+    image: string;
+    rating: number;
+  }
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -51,6 +61,11 @@ function App() {
   const reviewsPerPage = isMobile ? 1 : 2;
   const totalSlides = Math.ceil(reviews.length / reviewsPerPage);
 
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === totalSlides - 1 ? 0 : prevIndex + 1
+    );
+  }, [totalSlides]);
   // Auto-slide functionality
   useEffect(() => {
     const timer = setInterval(() => {
@@ -58,20 +73,20 @@ function App() {
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
-  const nextSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === totalSlides - 1 ? 0 : prevIndex + 1
-    );
-  }, [totalSlides]);
+
 
   const getCurrentReviews = useCallback(() => {
     const startIndex = currentIndex * reviewsPerPage;
     return reviews.slice(startIndex, startIndex + reviewsPerPage);
   }, [currentIndex, reviewsPerPage]);
 
-  const ReviewCard = ({ review }) => (
+  interface ReviewCardProps {
+    review: Review;  // Define the expected prop type here
+  }
+  
+  const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => (
     <div className="flex-1 p-3">
       <div
         className="flex relative group flex-col border-2 border-[#443] 
@@ -314,7 +329,7 @@ function App() {
           <div className="overflow-hidden rounded-lg">
             <div className="relative">
               <div className={`flex py-10 gap-6 ${isMobile ? "flex-col" : ""}`}>
-                {getCurrentReviews().map((review) => (
+                {getCurrentReviews().map((review:Review) => (
                   <ReviewCard key={review.id} review={review} />
                 ))}
               </div>
