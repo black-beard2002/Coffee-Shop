@@ -17,11 +17,11 @@ function HeaderNav() {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-row gap-6">
-          <a className={fixedClassName} href="#home">Home</a>
-          <a className={fixedClassName} href="#menu">Menu</a>
-          <a className={fixedClassName} href="#about">About</a>
-          <a className={fixedClassName} href="#reviews">Review</a>
-          <a className={fixedClassName} href="#book">Book</a>
+          <a className={fixedClassName} href="#home" onClick={()=>setIsOpen(false)}>Home</a>
+          <a className={fixedClassName} href="#menu" onClick={()=>setIsOpen(false)}>Menu</a>
+          <a className={fixedClassName} href="#about" onClick={()=>setIsOpen(false)}>About</a>
+          <a className={fixedClassName} href="#reviews" onClick={()=>setIsOpen(false)}>Review</a>
+          <a className={fixedClassName} href="#book" onClick={()=>setIsOpen(false)}>Book</a>
         </div>
 
         {/* Book a Table Button - Fixed for Desktop */}
