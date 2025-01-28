@@ -352,7 +352,7 @@ function Main() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerContainer}
-          className="w-full mt-5 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center"
+          className="w-full mt-20 px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-items-center"
         >
           {items.map((item) => item.popular && (
             <motion.div key={item.id} variants={fadeInUp}>
