@@ -13,7 +13,7 @@ import bookbg from "./assets/image/bookbg.jpg";
 import { ProductItem } from "./components/ProductItem.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import reviews from "./assets/data/reviews.ts";
-
+import ScrollReveal from './components/ScrollReveal';
 import {
   faArrowRight,
   faEnvelope,
@@ -32,6 +32,7 @@ import {
   faTiktok,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 function App() {
 
@@ -46,6 +47,59 @@ function App() {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+
+  const fadeInUp = {
+    initial: {
+      y: 60,
+      opacity: 0
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+  
+  const fadeInLeft = {
+    initial: {
+      x: -60,
+      opacity: 0
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+  
+  const fadeInRight = {
+    initial: {
+      x: 60,
+      opacity: 0
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+  
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -87,7 +141,7 @@ function App() {
   }
   
   const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => (
-    <div className="flex-1 p-3">
+    <div className="flex-1 p-3 ">
       <div
         className="flex relative group flex-col border-2 border-[#443] 
               rounded-[95%_4%_97%_5%/_4%_94%_3%_95%] items-center text-center h-full bg-white p-6"
@@ -182,7 +236,14 @@ function App() {
       </div>
 
       {/* About Section */}
-      <div
+      <motion.div 
+  initial="initial"
+  whileInView="animate"
+  viewport={{ once: true }}
+  variants={fadeInLeft}
+  className="flex flex-col lg:flex-row items-center mt-10 space-y-8 md:space-y-0 md:space-x-12"
+>
+<div
         id="about"
         className="w-full px-4 md:px-16 lg:px-28 py-16 flex flex-col items-center"
       >
@@ -260,6 +321,8 @@ function App() {
           </div>
         </div>
       </div>
+</motion.div>
+
 
       <div
         className="w-full min-h-screen flex flex-col bg-cover bg-center p-5"
@@ -286,11 +349,19 @@ function App() {
             Popular Menu
           </h1>
         </div>
-        <div className="w-full mt-5 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
-          {items.map((item) => (
-            <ProductItem key={item.id} product={item} />
-          ))}
-        </div>
+        <motion.div 
+  initial="initial"
+  whileInView="animate"
+  viewport={{ once: true }}
+  variants={staggerContainer}
+  className="w-full mt-5 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center"
+>
+  {items.map((item) => (
+    <motion.div key={item.id} variants={fadeInUp}>
+      <ProductItem product={item} />
+    </motion.div>
+  ))}
+</motion.div>
         <button
               className="self-center inline-flex flex-row gap-2 items-center group md:self-start max-w-fit px-4 mx-auto py-2 border-2 border-[#443] 
         rounded-[95%_4%_97%_5%/_4%_94%_3%_95%] text-[#443] 
@@ -374,11 +445,14 @@ function App() {
             Reserve A Table
           </h1>
         </div>
-        <form
-          className="border-2 border-[#443] 
-              rounded-[95%_4%_97%_5%/_4%_94%_3%_95%] p-10 w-full md:w-3/5 lg:w-1/2 mt-16 mx-auto"
-        >
-          <input
+        <motion.form
+  initial="initial"
+  whileInView="animate"
+  viewport={{ once: true }}
+  variants={fadeInRight}
+  className="border-2 border-[#443] rounded-[95%_4%_97%_5%/_4%_94%_3%_95%] p-10 w-full md:w-3/5 lg:w-1/2 mt-16 mx-auto"
+>
+<input
             type="text"
             placeholder="Name"
             required
@@ -408,7 +482,9 @@ function App() {
           >
             Send Message
           </button>
-        </form>
+</motion.form>
+
+
       </div>
 
       <div className="w-full mt-5" id="footer">
