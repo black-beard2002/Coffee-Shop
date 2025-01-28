@@ -49,11 +49,11 @@ function HeaderNav() {
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 -translate-y-full pointer-events-none'}`}
       >
-        <a className={fixedClassName} href="#home">Home</a>
-        <a className={fixedClassName} href="/menu">Menu</a>
-        <a className={fixedClassName} href="#about">About</a>
-        <a className={fixedClassName} href="#reviews">Review</a>
-        <a className={fixedClassName} href="#book">Book</a>
+        <a className={fixedClassName} onClick={()=>setIsOpen(false)} href="#home">Home</a>
+        <a className={fixedClassName} onClick={()=>setIsOpen(false)} href="/menu">Menu</a>
+        <a className={fixedClassName} onClick={()=>setIsOpen(false)} href="#about">About</a>
+        <a className={fixedClassName} onClick={()=>setIsOpen(false)} href="#reviews">Review</a>
+        <a className={fixedClassName} onClick={()=>setIsOpen(false)} href="#book">Book</a>
         
         {/* Mobile Book a Table Button */}
         <button className="inline-block px-8 py-1 border-2 border-[#443] 
