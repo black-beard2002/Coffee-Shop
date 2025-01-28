@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+'import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {useNavigate} from "react-router-dom";
 import menubg from "../assets/image/menubg.jpg";
@@ -75,7 +75,7 @@ const Menu = () => {
         animate={{ opacity: 1, y: 0 }}
         className="flex relative flex-wrap justify-center gap-4 mt-8 px-4"
       >
-        <button onClick={()=>navigate('/)} className="px-6 py-3 group rounded-full shadow-lg transition-all duration-300 hover:bg-white/50 cursor-pointer inline-flex flex-row gap-1 items-center">
+        <button onClick={()=>navigate('/')} className="px-6 py-3 group rounded-full shadow-lg transition-all duration-300 hover:bg-white/50 cursor-pointer inline-flex flex-row gap-1 items-center">
           <FontAwesomeIcon icon={faCircleLeft} className="w-6 h-6 text-[#443] group-hover:scale-105 duration-100 " />
           <span className="text-[#443]">Home</span>
         </button>
