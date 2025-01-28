@@ -36,7 +36,7 @@ export const ProductItem: React.FC<ProductProps> = ({ product }) => {
 <svg 
   viewBox="0 0 24 24" 
   className={`
-    absolute top-2 right-3 w-6 h-6 cursor-pointer
+    absolute bottom-2 right-3 w-5 h-5 cursor-pointer
     transform transition-all duration-300 ease-in-out
     ${isFilled ? 'scale-110' : 'scale-100'}
     hover:scale-105
