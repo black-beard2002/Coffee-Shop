@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {useNavigate} from "react-router-dom";
 import menubg from "../assets/image/menubg.jpg";
 import items from "../assets/data/menuitems";
 import ProductItem from "../components/ProductItem";
@@ -8,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBottleDroplet,
   faCake,
-  faCircleLeft,
   faCoffee,
   faCookie,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +14,7 @@ import {
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [filteredItems, setFilteredItems] = useState(items);
-  const navigate = useNavigate();
+
   const categories = [
     {
       id: "drinks",
@@ -75,10 +73,6 @@ const Menu = () => {
         animate={{ opacity: 1, y: 0 }}
         className="flex relative flex-wrap justify-center gap-4 mt-8 px-4"
       >
-        <button onClick={()=>navigate('/')} className="px-6 py-3 group rounded-full shadow-lg transition-all duration-300 hover:bg-white/50 cursor-pointer inline-flex flex-row gap-1 items-center">
-          <FontAwesomeIcon icon={faCircleLeft} className="w-6 h-6 text-[#443] group-hover:scale-105 duration-100 " />
-          <span className="text-[#443]">Home</span>
-        </button>
         <button
           onClick={() => setActiveCategory("all")}
           className={`px-6 py-3 rounded-full shadow-lg transition-all duration-300 ${
@@ -120,7 +114,7 @@ const Menu = () => {
                 ?.name || "Other"}
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
+        <div className="w-full mt-20 px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-items-center">
           {filteredItems.map((item) => (
             <div key={item.id} className="w-full">
               <ProductItem product={item} />
