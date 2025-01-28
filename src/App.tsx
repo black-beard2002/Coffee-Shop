@@ -13,7 +13,7 @@ import bookbg from "./assets/image/bookbg.jpg";
 import { ProductItem } from "./components/ProductItem.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import reviews from "./assets/data/reviews.ts";
-import ScrollReveal from './components/ScrollReveal';
+
 import {
   faArrowRight,
   faEnvelope,
