@@ -30,7 +30,7 @@ export const ProductItem: React.FC<ProductProps> = ({ product }) => {
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
         onClick={() => setShowTooltip(!showTooltip)}
-        className="absolute -top-10 left-1/2 transform -translate-x-1/2  w-20 aspect-square object-fit rounded-full cursor-default
+        className="absolute -top-10 left-1/2 transform -translate-x-1/2  w-20 aspect-square object-fit cursor-default
               transition-transform duration-300 group-hover:scale-110"
       />
 <svg 
