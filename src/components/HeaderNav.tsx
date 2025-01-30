@@ -55,13 +55,6 @@ function HeaderNav() {
         <a className={fixedClassName} onClick={()=>setIsOpen(false)} href="#reviews">Review</a>
         <a className={fixedClassName} onClick={()=>setIsOpen(false)} href="#book">Book</a>
         
-        {/* Mobile Book a Table Button */}
-        <button className="inline-block px-8 py-1 border-2 border-[#443] 
-        rounded-[95%_4%_97%_5%/_4%_94%_3%_95%] text-[#443] 
-        hover:rounded-[4%_95%_6%_95%/_95%_4%_92%_5%] hover:border-dashed 
-        transition-all duration-300 md:hidden">
-          Book A Table
-        </button>
       </div>
     </nav>
   );
