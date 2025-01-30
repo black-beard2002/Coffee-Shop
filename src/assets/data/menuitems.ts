@@ -3,7 +3,6 @@ import menu2 from "../image/menu2.png";
 import menu3 from "../image/menu3.png";
 import menu4 from "../image/menu4.png";
 import menu5 from "../image/menu5.png";
-import menu6 from "../image/menu6.png";
 import pie1 from "../image/pie1.png";
 import pie2 from "../image/pie2.png";
 import pie3 from "../image/pie3.png";
