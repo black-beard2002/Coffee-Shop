@@ -9,11 +9,11 @@ import pie2 from "../image/pie2.png";
 import pie3 from "../image/pie3.png";
 import pie4 from "../image/pie4.png";
 import pie5 from "../image/pie5.png";
-import cr1 from '../image/cr1.png';
-import cr2 from '../image/cr2.png';
-import cr3 from '../image/cr3.png';
-import cr4 from '../image/cr4.png';
-import cr5 from '../image/cr5.png';
+import cr1 from "../image/cr1.png";
+import cr2 from "../image/cr2.png";
+import cr3 from "../image/cr3.png";
+import cr4 from "../image/cr4.png";
+import cr5 from "../image/cr5.png";
 const items = [
   // Hot Drinks
   {
