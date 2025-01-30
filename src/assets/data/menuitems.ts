@@ -4,7 +4,16 @@ import menu3 from "../image/menu3.png";
 import menu4 from "../image/menu4.png";
 import menu5 from "../image/menu5.png";
 import menu6 from "../image/menu6.png";
-
+import pie1 from "../image/pie1.png";
+import pie2 from "../image/pie2.png";
+import pie3 from "../image/pie3.png";
+import pie4 from "../image/pie4.png";
+import pie5 from "../image/pie5.png";
+import cr1 from '../image/cr1.png';
+import cr2 from '../image/cr2.png';
+import cr3 from '../image/cr3.png';
+import cr4 from '../image/cr4.png';
+import cr5 from '../image/cr5.png';
 const items = [
   // Hot Drinks
   {
@@ -66,7 +75,7 @@ const items = [
     category: "pies",
     popular: true,
     description: "Classic apple pie with cinnamon.",
-    image: menu6,
+    image: pie1,
     detailedDescription: "Fresh apples tossed with cinnamon and sugar, baked in a flaky, buttery crust until golden brown.",
   },
   {
@@ -76,7 +85,7 @@ const items = [
     category: "pies",
     popular: true,
     description: "Sweet-tart cherry filling.",
-    image: menu1,
+    image: pie3,
     detailedDescription: "Juicy cherries in a perfectly sweetened filling, encased in a homemade butter crust.",
   },
   {
@@ -86,7 +95,7 @@ const items = [
     category: "pies",
     popular: false,
     description: "Tangy lemon with fluffy meringue.",
-    image: menu2,
+    image: pie5,
     detailedDescription: "Zesty lemon curd topped with light, fluffy meringue peaks, baked until golden.",
   },
   {
@@ -96,7 +105,7 @@ const items = [
     category: "pies",
     popular: true,
     description: "Rich and nutty southern classic.",
-    image: menu3,
+    image: pie4,
     detailedDescription: "Classic southern pie with a rich filling of pecans, butter, and brown sugar in a flaky crust.",
   },
   {
@@ -106,7 +115,7 @@ const items = [
     category: "pies",
     popular: false,
     description: "Spiced pumpkin custard pie.",
-    image: menu4,
+    image: pie2,
     detailedDescription: "Smooth pumpkin custard seasoned with fall spices, baked in a tender crust.",
   },
 
@@ -118,7 +127,7 @@ const items = [
     category: "croissants",
     popular: true,
     description: "Traditional French butter croissant.",
-    image: menu5,
+    image: cr3,
     detailedDescription: "Flaky, buttery layers of hand-rolled French pastry, baked to golden perfection.",
   },
   {
@@ -128,7 +137,7 @@ const items = [
     category: "croissants",
     popular: true,
     description: "Croissant with dark chocolate.",
-    image: menu6,
+    image: cr2,
     detailedDescription: "Buttery croissant filled with rich dark chocolate, creating a perfect balance of flavors.",
   },
   {
@@ -138,7 +147,7 @@ const items = [
     category: "croissants",
     popular: true,
     description: "Filled with almond cream.",
-    image: menu1,
+    image: cr4,
     detailedDescription: "Twice-baked croissant filled with almond cream and topped with sliced almonds.",
   },
   {
@@ -148,7 +157,7 @@ const items = [
     category: "croissants",
     popular: false,
     description: "Savory croissant sandwich.",
-    image: menu2,
+    image: cr5,
     detailedDescription: "Flaky croissant filled with premium ham and melted Swiss cheese.",
   },
   {
@@ -158,7 +167,7 @@ const items = [
     category: "croissants",
     popular: false,
     description: "Sweet croissant with raisins.",
-    image: menu3,
+    image: cr1,
     detailedDescription: "Buttery croissant studded with plump, sweet raisins throughout.",
   },
 
