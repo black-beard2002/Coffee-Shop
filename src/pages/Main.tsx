@@ -281,7 +281,7 @@ function Main() {
                 At our coffee shop, every cup is crafted with care, using only
                 the finest, sustainably sourced beans. We roast in small batches
                 to ensure maximum freshness, bringing out rich, unique flavors
-                in every brew. Whether you're enjoying a bold espresso or a
+                in every memories. Whether you're enjoying a bold espresso or a
                 smooth latte, our attention to quality and passion for great
                 coffee make every sip something truly special.
               </p>
@@ -563,7 +563,7 @@ function Main() {
               </a>
               <a className="inline-flex flex-row gap-2 text-sm text-[#443] items-center font-poppins hover:underline cursor-pointer">
                 <FontAwesomeIcon icon={faEnvelope} className="text-[#443]" />
-                Brew.Haven@gmail.com
+                memories.@gmail.com
               </a>
             </div>
           </div>
@@ -574,19 +574,19 @@ function Main() {
             <div className="flex flex-col gap-4">
               <a className="inline-flex flex-row gap-2 text-sm text-[#443] items-center font-poppins hover:underline cursor-pointer">
                 <FontAwesomeIcon icon={faFacebook} className="text-[#443]" />
-                Brew Haven
+                memories-coffee
               </a>
               <a className="inline-flex flex-row gap-2 text-sm text-[#443] items-center font-poppins hover:underline cursor-pointer">
                 <FontAwesomeIcon icon={faTwitter} className="text-[#443]" />
-                Brew.Haven
+                memories
               </a>
               <a className="inline-flex flex-row gap-2 text-sm text-[#443] items-center font-poppins hover:underline cursor-pointer">
                 <FontAwesomeIcon icon={faInstagram} className="text-[#443]" />
-                @Brew.Haven
+                @memories
               </a>
               <a className="inline-flex flex-row gap-2 text-sm text-[#443] items-center font-poppins hover:underline cursor-pointer">
                 <FontAwesomeIcon icon={faTiktok} className="text-[#443]" />
-                BrewHaven
+                memories
               </a>
             </div>
           </div>
