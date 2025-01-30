@@ -19,6 +19,12 @@ import cake2 from "../image/cake2.png";
 import cake3 from "../image/cake3.png";
 import cake4 from "../image/cake4.png";
 import cake5 from "../image/cake5.png";
+import cold1 from "../image/cold1.png";
+import cold2 from "../image/cold2.png";
+import cold3 from "../image/cold3.png"
+import cold4 from "../image/cold4.png"
+import cold5 from "../image/cold5.png"
+
 const items = [
   // Hot Drinks
   {
@@ -184,7 +190,7 @@ const items = [
     category: "coldDrinks",
     popular: true,
     description: "Chilled espresso with water.",
-    image: menu4,
+    image: cold3,
     detailedDescription: "Shots of espresso topped with cold water and ice for a refreshing coffee experience.",
   },
   {
@@ -194,7 +200,7 @@ const items = [
     category: "coldDrinks",
     popular: true,
     description: "Blended coffee drink.",
-    image: menu5,
+    image: cold2,
     detailedDescription: "Blended coffee drink with ice and milk, topped with whipped cream.",
   },
   {
@@ -204,7 +210,7 @@ const items = [
     category: "coldDrinks",
     popular: true,
     description: "Smooth, slow-steeped coffee.",
-    image: menu6,
+    image: cold5,
     detailedDescription: "Coffee brewed with cold water over 12-24 hours for a smooth, less acidic taste.",
   },
   {
@@ -214,7 +220,7 @@ const items = [
     category: "coldDrinks",
     popular: false,
     description: "Green tea latte over ice.",
-    image: menu1,
+    image: cold1,
     detailedDescription: "Premium matcha green tea with cold milk and ice for a refreshing experience.",
   },
   {
@@ -224,7 +230,7 @@ const items = [
     category: "coldDrinks",
     popular: false,
     description: "Spiced tea latte with ice.",
-    image: menu2,
+    image: cold4,
     detailedDescription: "Spiced black tea blend with cold milk and ice, perfect for warm days.",
   },
 
