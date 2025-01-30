@@ -14,6 +14,11 @@ import cr2 from "../image/cr2.png";
 import cr3 from "../image/cr3.png";
 import cr4 from "../image/cr4.png";
 import cr5 from "../image/cr5.png";
+import cake1 from "../image/cake1.png";
+import cake2 from "../image/cake2.png";
+import cake3 from "../image/cake3.png";
+import cake4 from "../image/cake4.png";
+import cake5 from "../image/cake5.png";
 const items = [
   // Hot Drinks
   {
@@ -231,7 +236,7 @@ const items = [
     category: "cakes",
     popular: true,
     description: "Rich chocolate layer cake.",
-    image: menu3,
+    image: cake5,
     detailedDescription: "Four layers of moist chocolate cake with dark chocolate ganache and chocolate buttercream.",
   },
   {
@@ -241,7 +246,7 @@ const items = [
     category: "cakes",
     popular: true,
     description: "Classic spiced carrot cake.",
-    image: menu4,
+    image: cake4,
     detailedDescription: "Moist carrot cake with walnuts, topped with cream cheese frosting.",
   },
   {
@@ -251,7 +256,7 @@ const items = [
     category: "cakes",
     popular: true,
     description: "Cocoa-flavored red cake.",
-    image: menu5,
+    image: cake2,
     detailedDescription: "Classic red velvet cake with cream cheese frosting and chocolate shavings.",
   },
   {
@@ -261,7 +266,7 @@ const items = [
     category: "cakes",
     popular: false,
     description: "Light lemon-flavored cake.",
-    image: menu6,
+    image: cake1,
     detailedDescription: "Light and zesty lemon cake with lemon syrup and citrus glaze.",
   },
   {
@@ -271,7 +276,7 @@ const items = [
     category: "cakes",
     popular: true,
     description: "Coffee-flavored Italian dessert.",
-    image: menu1,
+    image: cake3,
     detailedDescription: "Italian dessert cake with layers of coffee-soaked ladyfingers and mascarpone cream.",
   },
 ];
